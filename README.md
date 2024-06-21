@@ -1,74 +1,70 @@
 # ParticleNetwork
+
 [![Telegram channel](https://img.shields.io/endpoint?url=https://runkit.io/damiankrawczyk/telegram-badge/branches/master?url=https://t.me/oxcode1)](https://t.me/oxcode1)
 
-✈️[Telegram Channel](https://t.me/oxcode1)
+✈️ [Telegram Channel](https://t.me/oxcode1)
 
 ![img1](data/demo/demo.png)
 
-## 💡Функционал  
-| Функционал                                                     | Поддерживается  |
-|----------------------------------------------------------------|:---------------:|
-| Многопоточность                                                |        ✅       |
-| Локальная база данных                                          |        ✅       |
-| Поддержка капчи CapMonster, Twocaptcha, AntiCaptcha            |        ✅       |
-| Поддержка прокси любого формата (HTTP ONLY)                    |        ✅       |
-| Загрузка списком REFCODE                                       |        ✅       |
-| Поддержка всех сетей EVM                                       |        ✅       |
-| Выполняет Daily CHECK-IN                                       |        ✅       |
-| Выполняет DEPOSIT UNIVERSAL GAS                                |        ✅       |
-| Выполняет USE UNIVERSAL GAS TO TRANSACT (100 транзакций/24ч)   |        ✅       |
-| Выполняет RETWEET PARTICLE NETWORK'S TWEET                     |        ✅       |
-| Сбор информации об аккаунте и кошельках EVM                    |        ✅       |
-| Экспорт информации об аккаунтах в txt, excel                   |        ✅       |
-| Генерация кошельков EVM                                        |        ✅       |
-| И прочее :)                                                    |        ✅       |
+## 💡 Functionality
+| Feature                                                          | Supported  |
+|------------------------------------------------------------------|:----------:|
+| Multithreading                                                   |     ✅     |
+| Local database                                                   |     ✅     |
+| Captcha support (CapMonster, Twocaptcha, AntiCaptcha)            |     ✅     |
+| Proxy support (HTTP ONLY)                                        |     ✅     |
+| Load list by REFCODE                                             |     ✅     |
+| Support for all EVM networks                                     |     ✅     |
+| Perform Daily CHECK-IN                                           |     ✅     |
+| Perform DEPOSIT UNIVERSAL GAS                                    |     ✅     |
+| Perform USE UNIVERSAL GAS TO TRANSACT (100 transactions/24h)     |     ✅     |
+| Perform RETWEET PARTICLE NETWORK'S TWEET                         |     ✅     |
+| Gather account and EVM wallet information                        |     ✅     |
+| Export account information to txt, excel                         |     ✅     |
+| Generate EVM wallets                                             |     ✅     |
+| And more :)                                                      |     ✅     |
 
-## [⚙️Настройки](https://github.com/NikeAK/ParticleNetwork/blob/main/data/config.py)
-| Настройка                  | Описание (см. config.py)                                                  |
-|----------------------------|---------------------------------------------------------------------------|
-| **MAIN_NETWORK**           | Выберите основную сеть, указав число                                      |
-| **DEPOSIT_USDG**           | Укажите числа [min, max] для суммы депозита USDG в вашей сети             |
-| **DEPOSIT_PRATICLE**       | Укажите числа [min, max] для суммы пополнения ParticleWallet в вашей сети |
-| **MAKE_TRANSACTIONS**      | Накручивать 100 транзакций для выполнение ежедневного задания?            |
-| **MAX_GAS_USDG**           | Максимальный газ USDG для оплаты, у каждой сети сильно отличается.        |
-| **TRANSFER_AMOUNT**        | Укажите числа [min, max] для суммы перевода при накрутки транзакций.      |
-| **DELAY_TRANSACTIONS**     | Укажите числа [min, max] для выставления задержки между транзакциями.     |
-| **RANDOM_TX**              | Включить случайные транзакции?                                            |
-| **TIMEOUT_PROXY**          | Максимальное время ожидания при проверке прокси в секундах                |
-| **REQUEST_ATTEMPTS**       | Количество попыток при не удачных запросах                                |
-| **CAPTCHA_API_KEY**        | Ключ качи                                                                 |
-| **GET_ALL_BALANCES**       | Получать актуальный баланс всех EVM сетей?                                |
-| **DELAY_ALL_BALANCES**     | Задержка в сек. между получением баланса в 1 сети/1 кошелька              |
-| **EXPORT_DATA**            | Используемые данные для экспорта                                          |
-| **EXPORT_SEPARATOR**       | Символ разделения данных для экспорта в TXT                               |
+## [⚙️ Settings](https://github.com/NikeAK/ParticleNetwork/blob/main/data/config.py)
+| Setting                   | Description (see config.py)                                                |
+|---------------------------|-----------------------------------------------------------------------------|
+| **MAIN_NETWORK**          | Choose the main network by specifying a number                             |
+| **DEPOSIT_USDG**          | Specify numbers [min, max] for USDG deposit amount in your network         |
+| **DEPOSIT_PARTICLE**      | Specify numbers [min, max] for ParticleWallet deposit amount in your network|
+| **MAKE_TRANSACTIONS**     | Execute 100 transactions for the daily task?                               |
+| **MAX_GAS_USDG**          | Maximum USDG gas fee, varies significantly across networks.                |
+| **TRANSFER_AMOUNT**       | Specify numbers [min, max] for transfer amount during transaction execution.|
+| **DELAY_TRANSACTIONS**    | Specify numbers [min, max] for delay between transactions.                 |
+| **RANDOM_TX**             | Enable random transactions?                                                |
+| **TIMEOUT_PROXY**         | Maximum wait time when checking proxies in seconds                         |
+| **REQUEST_ATTEMPTS**      | Number of attempts for unsuccessful requests                               |
+| **CAPTCHA_API_KEY**       | Captcha key                                                                |
+| **GET_ALL_BALANCES**      | Retrieve current balance of all EVM networks?                              |
+| **DELAY_ALL_BALANCES**    | Delay in seconds between retrieving balance in 1 network/1 wallet          |
+| **EXPORT_DATA**           | Data to be exported                                                        |
+| **EXPORT_SEPARATOR**      | Data separator symbol for exporting to TXT                                 |
 
-## 📝Пояснение
-1. Заполните config.py
-2. Загрузите аккаунты в текстовики
-3. При первом запуске выберите в терминале Launch - Add account to database
-    - Софт выполняет вход в аккаунт ParticleNetwork и проверяет, установлен ли реферальный код. Если рефкод не установлен, он присваивает его аккаунту. Затем проверяет, привязан ли уже Twitter. Если привязан, то пропускает привязку Twitter, если нет, то берет один токен из файла, проверяет его на валидность и привязывает к аккаунту. После этого аккаунт добавляется в базу данных.
-    - При таком запуске ни в коем случае не нажимайте CTRL+C, иначе данные будут удалены из TXT-файла и нет гарантии, что они успели добавиться в базу данных, или Discord или Twitter уже привязался к какому-то аккаунту. Если вы думаете, что сможете просто снова залить эти аккаунты и всё будет в порядке, то это не так. Софт не проверяет, привязаны ли аккаунты Twitter и Discord к другому аккаунту, что может привести к ошибкам в дальнейшем. (Тут на самом деле сложно объяснить, просто не нажимайте CTRL+C)
-4. После успешного добавления аккаунтов, вы можете выбрать в терминале Launch -> DataBase
-    - Здесь софт просто выполняет задания и крутит транзакции, после успешного выполнения, обновляет информация/статистику аккаунта и кошельков(если вкл. GET_ALL_BALANCES)
-    - Отмечу, что софт для выполнения задания USE UNIVERSAL GAS TO TRANSACT выводит небольшие суммы с Particle Wallet на ваш основной кошелек EVM. Если баланс Particle Wallet недостаточен, выполняется операция DEPOSIT_PARTICLE. Для газа USDG применяется аналогичный процесс DEPOSIT_USDG.
-    - Также для транзакций можно выставить максимальный газ для оплаты комиссий в USDG. Для оплаты комиссий с EVM кошельков не стал добавлять максимальный газ, но вы можете регулировать его MULTIPLIER_GAS.
-    - Также чтобы при накрутке транзакций не было отправки только с ParticleWallet. Можно включить случайные транзакции. Софт генерирует случайное число от 1 до 12. Если выпадет число 1, софт сделает долнительную транзакцию DEPOSIT_PRATICLE. Если выпадет число 12, софт сделает дополнительную транзакцию DEPOSIT_USDG.
-5. После того как вы прошлись по все базе данных, вы можете экспортировать всю доступные информацию.
-    - Вам будет предложено выбрать, какую информацию экспортировать: по умолчанию используется config.py (см. config.py), либо вы можете выбрать нужную информацию с помощью стрелок. Далее выберите формат экспорта: TXT или Excel.
-6. Повторяете 4 пункт каждый день и ждите Profit, т.к тестнет должен быть награждаемый :)
+## 📝 Instructions
+1. Fill in config.py
+2. Load accounts into text files
+3. On first launch, select Launch - Add account to database in the terminal
+    - The software logs into the ParticleNetwork account and checks if the referral code is set. If not, it assigns the code to the account. It then checks if Twitter is linked. If it is, it skips Twitter linking; if not, it takes a token from the file, verifies it, and links it to the account. The account is then added to the database.
+    - Do not press CTRL+C during this process, as data will be removed from the TXT file and it’s not guaranteed that it was added to the database or that Discord/Twitter was linked to an account. Re-uploading the accounts won’t necessarily fix this as the software does not check if Twitter/Discord accounts are linked to another account, which may lead to errors later.
+4. After successfully adding accounts, you can choose Launch -> DataBase in the terminal
+    - The software simply performs tasks and executes transactions. After successful completion, it updates the account and wallet information/statistics (if GET_ALL_BALANCES is enabled).
+    - Note that for the USE UNIVERSAL GAS TO TRANSACT task, the software withdraws small amounts from Particle Wallet to your main EVM wallet. If the Particle Wallet balance is insufficient, it performs a DEPOSIT_PARTICLE operation. The same process applies for USDG gas fees.
+    - You can set the maximum gas fee for USDG transactions. I didn’t add a maximum gas fee for EVM wallets, but you can regulate it with MULTIPLIER_GAS.
+    - To avoid sending transactions only from ParticleWallet, you can enable random transactions. The software generates a random number from 1 to 12. If it’s 1, it makes an additional DEPOSIT_PARTICLE transaction. If it’s 12, it makes an additional DEPOSIT_USDG transaction.
+5. After going through the entire database, you can export all available information.
+    - You will be prompted to choose which information to export: by default, config.py is used (see config.py), or you can choose the required information using the arrow keys. Then select the export format: TXT or Excel.
+6. Repeat step 4 daily and wait for profit, as the testnet is expected to be rewarded :)
 
-## ⚡️Быстрый запуск
-1. Запустите $\color{orange}{\textsf{Setup.bat}}$. Этот скрипт автоматически создаст виртуальное окружение, активирует его, установит все необходимые зависимости из файла requirements.txt и удалит не нужные файлы.
-2. После успешного выполнения $\color{orange}{\textsf{Setup.bat}}$, вы можете запустить $\color{orange}{\textsf{Main.bat}}$. Этот скрипт активирует виртуальное окружение и запустит софт.
+## ⚡️ Quick Start
+1. Run $\color{orange}{\textsf{Setup.bat}}$. This script will automatically create a virtual environment, activate it, install all necessary dependencies from the requirements.txt file, and remove unnecessary files.
+2. After successfully running $\color{orange}{\textsf{Setup.bat}}$, you can launch $\color{orange}{\textsf{Main.bat}}$. This script will activate the virtual environment and start the software.
 
-## 🛠️Ручная установка
+## 🛠️ Manual Installation
 ```shell
-~ >>> python -m venv Venv              #Создание виртуального окружения
-~ >>> Venv/Scripts/activate            #Активация виртуального окружения
-~ >>> pip install -r requirements.txt  #Установка зависимостей
-~ >>> python main.py                   #Запуск
-```
-
-## 💰DONATION EVM ADDRESS: 
-**0x1C6E533DCb9C65BD176D36EA1671F7463Ce8C843**
-
+~ >>> python -m venv Venv              # Create a virtual environment
+~ >>> Venv/Scripts/activate            # Activate the virtual environment
+~ >>> pip install -r requirements.txt  # Install dependencies
+~ >>> python main.py                   # Run the software
